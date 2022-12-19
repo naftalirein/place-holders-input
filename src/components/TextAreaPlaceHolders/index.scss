@@ -1,0 +1,61 @@
+.textarea-place-holders-container {
+    resize: vertical;
+    border-radius: 12px;
+    border: solid 1px #e2dfe7;
+    font: 400 16px Montserrat, sans-serif;
+    padding: 15px 15px 15px 20px;
+    color: #463f5a;
+    overflow: auto;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    .place-holders-list-container {
+        position: relative;
+        bottom: 10px;
+        padding-top: 16px;
+
+        .place-holder-title {
+            margin: 4px;
+            font: 600 12px Montserrat, sans-serif;
+            padding: 4px;
+            display: inline-flex;
+            background-color: #6664f5;
+            border-radius: 16px;
+            color: white;
+
+        }
+    }
+
+    .textarea-content {
+        max-height: 300px;
+        outline: none;
+
+        .place-holder-container {
+            font: 600 12px Montserrat, sans-serif;
+            padding: 4px;
+            display: inline-flex;
+            background-color: #6664f5;
+            border-radius: 16px;
+            color: white;
+
+            .place-holder {
+                margin: 0 4px 4px;
+            }
+
+            .place-holder-x {
+                font: 200 14px Montserrat, sans-serif;
+                cursor: pointer;
+                display: inline-flex;
+            }
+        }
+    }
+
+    [contenteditable='true']:empty:before {
+        content: attr(placeholder);
+        display: block;
+        color: #c1bac9;
+    }
+}

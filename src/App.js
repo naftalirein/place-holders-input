@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import TextAreaPlaceHolders from "./components/TextAreaPlaceHolders";
+
+const defaultProps = {
+  text: `Hi 
+            <div class="place-holder-container"><div><div class="place-holder" contenteditable="false">Provider Name</div></div><div><div class="place-holder-x" contenteditable="false"> x </div></div></div> 
+            <br> How are you`,
+  placeHolders: ["Talent Email", "Provider Name"],
+};
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <TextAreaPlaceHolders {...defaultProps} />
     </div>
   );
 }
